@@ -26,7 +26,8 @@ export class App extends React.Component {
     const { monsters, searchField } = this.state;
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()));
     return (
-      <div className="App">  
+      <div className="App">
+        <h1>Monsters Rolodex</h1>
         <Search placeholder="Search monsters" onChange={this.onchange}/>
         <CardsList monsters={ filteredMonsters } />
     </div>
